@@ -1,0 +1,11 @@
+{
+  "name": "Serenia Inicio VR",
+  "short_name": "Sereniainicio",
+  "description": "Un espacio para respirar, relajarte y calmar la mente.",
+  "lang": "es",
+  "start_url": "./SERENIAINCIO.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#D9D1ED",
+  "theme_color": "#74DDED"
+}

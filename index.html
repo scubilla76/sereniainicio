@@ -3,10 +3,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SERENIA VR - INICIO </title>
   <meta name="description" content="Serenia VR: un espacio para respirar, relajarte y calmar la mente.">
   <meta name="theme-color" content="#74DDED">
   <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./psychology-192.png">
 
 <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
 
@@ -313,6 +315,14 @@ onclick="entrarBosque()"
 
   </a-scene>
 
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+          .catch((error) => console.error("No se pudo registrar el Service Worker:", error));
+      });
+    }
+  </script>
 </body>
 </html>
 ```

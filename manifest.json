@@ -4,12 +4,17 @@
   "description": "Un espacio para respirar, relajarte y calmar la mente.",
   "lang": "es",
   "id": "./",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#D9D1ED",
   "theme_color": "#74DDED",
   "icons": [
+    {
+      "src": "./psychology-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
     {
       "src": "./psychology.png",
       "sizes": "512x512",

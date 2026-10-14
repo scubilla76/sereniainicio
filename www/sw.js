@@ -3,7 +3,6 @@ const APP_SHELL = [
   './',
   './index.html',
   './manifest.json',
-  './psychology-192.png',
   './psychology.png',
   './js/aframe.min.js',
   './js/aframe-event-set-component.min.js',

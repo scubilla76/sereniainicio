@@ -11,12 +11,6 @@
   "theme_color": "#74DDED",
   "icons": [
     {
-      "src": "./psychology-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
       "src": "./psychology.png",
       "sizes": "512x512",
       "type": "image/png",

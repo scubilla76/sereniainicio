@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/scubilla76/sereniainicio/issues"
   },
-  "homepage": "https://github.com/scubilla76/sereniainicio#readme"
+  "homepage": "https://github.com/scubilla76/sereniainicio#readme",
+  "dependencies": {
+    "@capacitor/android": "^5.7.8",
+    "@capacitor/cli": "^5.7.8",
+    "@capacitor/core": "^5.7.8"
+  }
 }

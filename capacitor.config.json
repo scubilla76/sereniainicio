@@ -1,0 +1,8 @@
+{
+  "appId": "com.scubilla.sereniainicio",
+  "appName": "sereniainicio",
+  "webDir": "www",
+  "cordova": {
+    "accessOrigins": []
+  }
+}

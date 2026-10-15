@@ -1,10 +1,10 @@
-const CACHE_NAME = 'serenia-vr-v3';
+const CACHE_NAME = 'serenia-vr-v4';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.json',
-  './psychology.png',
-  './psychology-192.png',
+  './images/psychology.png',
+  './images/psychology-192.png',
   './js/aframe.min.js',
   './js/aframe-event-set-component.min.js',
   './js/app.js',

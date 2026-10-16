@@ -1,0 +1,28 @@
+{
+  "name": "Serenia Inicio VR",
+  "short_name": "Sereniainicio",
+  "description": "Un espacio para respirar, relajarte y calmar la mente.",
+  "lang": "es",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#D9D1ED",
+  "theme_color": "#74DDED",
+    "icons": [
+    {
+      "src": "images/psychology192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/psychology.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+
+}
+

@@ -1,28 +1,34 @@
-const CACHE_NAME = 'serenia-vr-v1';
+const CACHE_NAME = 'serenia-vr-v4';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.json',
-  './psychology.png'
+  './images/psychology.png',
+  './images/psychology-192.png',
+  './js/aframe.min.js',
+  './js/aframe-event-set-component.min.js',
+  './js/app.js',
+  './assets/espacio.jpg',
+  './assets/bosque.jpg'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => {
-      return self.skipWaiting();
-    })
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(APP_SHELL))
+      .then(() => self.skipWaiting())
   );
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
+    caches.keys()
+      .then((keys) => Promise.all(
         keys
           .filter((key) => key !== CACHE_NAME)
           .map((key) => caches.delete(key))
-      );
-    }).then(() => self.clients.claim())
+      ))
+      .then(() => self.clients.claim())
   );
 });
 
@@ -31,20 +37,13 @@ self.addEventListener('fetch', (event) => {
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
+      if (cachedResponse) return cachedResponse;
 
-      return fetch(event.request).then((networkResponse) => {
-        const responseClone = networkResponse.clone();
-
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseClone);
-        });
-
-        return networkResponse;
-      }).catch(() => {
-        return caches.match('./index.html');
+      return fetch(event.request).catch((error) => {
+        if (event.request.mode === 'navigate') {
+          return caches.match('./index.html');
+        }
+        throw error;
       });
     })
   );
